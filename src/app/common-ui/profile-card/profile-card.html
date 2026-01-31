@@ -15,7 +15,7 @@
 		</div>
 		<div class="profile-card__desc">{{ profile.description }}</div>
 		<div class="profile-card__tags">
-			@for (st of profile.stack; track profile.id)
+			@for (st of profile.stack; track st)
 			{
 				<div class="skill-tag">{{st}}</div>
 			}
