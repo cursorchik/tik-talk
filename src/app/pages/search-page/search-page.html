@@ -1,1 +1,15 @@
-<p>search-page works!</p>
+<div class="profile-card__wrapper">
+
+	@if (profiles && profiles.length > 0)
+	{
+		@for (profile of profiles; track profile.id)
+		{
+			<app-profile-card [profile]="profile"></app-profile-card>
+		}
+	}
+	@else
+	{
+		<div class="loading">Загрузка профилей...</div>
+	}
+
+</div>
