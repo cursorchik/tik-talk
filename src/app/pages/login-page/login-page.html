@@ -1,1 +1,21 @@
-<p>login-page works!</p>
+<form
+	class="login-form"
+	[formGroup]="form"
+	(ngSubmit)="onSubmit()"
+>
+	<h1 class="h1 mb-60">Вход</h1>
+	<label class="tt-control-label mb-16">
+		Telegram username
+		<input
+			formControlName="username"
+			class="tt-input" type="text" placeholder="Введите логин" name="login">
+	</label>
+	<label class="tt-control-label mb-32">
+		Пароль
+		<input
+			formControlName="password"
+			class="tt-input" type="password" placeholder="Введите пароль" name="password">
+	</label>
+	<button class="btn" type="submit">Войти</button>
+</form>
+<img src="assets/svg/tt.svg" alt="">

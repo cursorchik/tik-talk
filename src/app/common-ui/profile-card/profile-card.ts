@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {IProfile} from '../../data/interfaces/IProfile';
+import {Profile} from '../../data/types/Profile';
 import {ImgUrlPipe} from '../../helpers/pipes/img-url-pipe';
 
 @Component({
@@ -12,5 +12,5 @@ import {ImgUrlPipe} from '../../helpers/pipes/img-url-pipe';
 })
 export class ProfileCard
 {
-	@Input() profile!: IProfile;
+	@Input() profile!: Profile;
 }

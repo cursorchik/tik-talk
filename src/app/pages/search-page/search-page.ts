@@ -1,5 +1,5 @@
 import {Component, inject} from '@angular/core';
-import {IProfile} from '../../data/interfaces/IProfile';
+import {Profile} from '../../data/types/Profile';
 import {ProfileService} from '../../data/services/profile.service';
 import {ProfileCard} from '../../common-ui/profile-card/profile-card';
 
@@ -9,9 +9,10 @@ import {ProfileCard} from '../../common-ui/profile-card/profile-card';
 	styleUrl: './search-page.scss',
 	imports: [ProfileCard]
 })
-export class SearchPage {
+export class SearchPage
+{
+	profiles: Profile[] = [];
 	profileService = inject(ProfileService);
-	profiles: IProfile[] = [];
 
 	constructor()
 	{
